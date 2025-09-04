@@ -15,3 +15,14 @@ def division(x, y):
 
 
 
+print("************************************")
+print("         MI CALCULADORA             ")
+print("************************************")
+print("SELECCIONA UNA OPERACIÓN MATEMÁTICA:")
+print("1. SUMA")
+print("2. RESTA")
+print("3. MULTIPLICACIÓN")
+print("4. DIVISION")
+print("************************************")
+
+
