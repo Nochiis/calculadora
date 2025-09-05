@@ -30,14 +30,6 @@ def operacion(o, a, b):
         print("OPCION INVALIDA.")
         
         
-def pedir_numero(mensaje):
-    while True:
-        try:
-            valor = int(mensaje)
-            return valor
-        except ValueError:
-            print("ESE VALOR NO ES UN NUMERO")
-
 while True:
     print("************************************")
     print("         MI CALCULADORA             ")
