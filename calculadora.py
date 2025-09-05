@@ -28,21 +28,44 @@ def operacion(o, a, b):
         return False
     else:
         print("OPCION INVALIDA.")
+        
+        
+def pedir_numero(mensaje):
+    while True:
+        try:
+            valor = int(mensaje)
+            return valor
+        except ValueError:
+            print("ESE VALOR NO ES UN NUMERO")
 
+while True:
+    print("************************************")
+    print("         MI CALCULADORA             ")
+    print("************************************")
+    print("1. SUMA")
+    print("2. RESTA")
+    print("3. MULTIPLICACIÓN")
+    print("4. DIVISION")
+    print("5. SALIR")
+    print("************************************")
 
-print("************************************")
-print("         MI CALCULADORA             ")
-print("************************************")
-print("1. SUMA")
-print("2. RESTA")
-print("3. MULTIPLICACIÓN")
-print("4. DIVISION")
-print("5. SALIR")
-print("************************************")
+    
+    try:
+        op = int(input("SELECCIONA UNA OPERACION: (1-5) "))
+    except ValueError:
+        print("NO ES UN NUNMERO")
+        continue
 
-op = int(input("SELECCIONA UNA OPERACION: "))
-a =  int(input("DIGITA EL PRIMER NUMERO: "))
-b =  int(input("DIGITA EL SEGUNDO NUMERO: "))
+    
+    if op == 5:
+        print("SALIENDO, ADIOS")
+        break
+    elif op not in [1, 2, 3, 4, 5]:
+        print("EL NUMERO DEBE SER ENTRE 1 Y 5")
+        continue    
 
-operacion(op, a, b)
+    a =  int(input("DIGITA EL PRIMER NUMERO: "))
+    b =  int(input("DIGITA EL SEGUNDO NUMERO: "))
+
+    operacion(op, a, b)
  
