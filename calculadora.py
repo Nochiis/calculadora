@@ -64,8 +64,19 @@ while True:
         print("EL NUMERO DEBE SER ENTRE 1 Y 5")
         continue    
 
-    a =  int(input("DIGITA EL PRIMER NUMERO: "))
-    b =  int(input("DIGITA EL SEGUNDO NUMERO: "))
-
+    try:
+        a =  int(input("DIGITA EL PRIMER NUMERO: "))
+    except ValueError:
+        print("NO ES UN NUNMERO")
+        continue        
+    
+    try:
+        b =  int(input("DIGITA EL SEGUNDO NUMERO: "))
+    except ValueError:
+        print("NO ES UN NUNMERO")
+        continue
+    
+    print("************************************")
+    
     operacion(op, a, b)
  
